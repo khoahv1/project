@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <h1>User List</h1>
+    <body style="text-align: center;">
+    {% if ds_nguoidung %}
+    <table id="username" border="1" style="text-align: center;" align="center">
+        <thead>
+            <tr>
+                <th>username</th>
+                <th>email</th>
+                <th>password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dt in ds_nguoidung %}
+            <tr>
+                <td>{{dt.username}}</td>
+                <td>{{dt.email}}</td>
+                <td>{{dt.password}}</td>
+                <td><a href="{%url 'detail' dt.id %}">Update</a></td>
+                <td><a href="{%url 'delete_user' dt.id %}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p style="text-align: center;">Data not exist</p>
+    {% endif %}
+    <form action="/login/">
+        <tr>
+            <input type="submit" name="back" value="Back to login">
+        </tr>
+    </form>
+</body>
+</html>

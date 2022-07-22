@@ -1,0 +1,34 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<style>
+    .trai {
+        text-align: left;
+    }
+</style>
+<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css">
+<body style="text-align: center;" class="hinhnen">
+    <h1>Login</h1>
+    <form action="{%url 'login_process'%}">
+        <table align="center">
+            <tr>
+                    <td class="trai">Username</td>
+                    <td><input type="text" id="username" name="username"></td>
+                <tr>
+                    <td class="trai">Password</td>
+                    <td><input type="password" id="password" name="password"></td>
+                <tr>
+                    <td><input type="submit" name="login" value="login"></td>
+                </tr>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

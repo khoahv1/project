@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .trai {
+        text-align: left;
+    }
+</style>
+
+<body style="text-align: center;">
+    <h1>Register User</h1>
+    <form action="{%url 'register_process'%}">
+        <table align="center">
+            <tr>
+                    <td class="trai">Username</td>
+                    <td><input type="text" id="username" name="username"></td>
+                <tr>
+                    <td class="trai">Email</td>
+                    <td><input type="text" id="email" name="email"></td>
+                </tr>
+                    <td class="trai">Password</td>
+                    <td><input type="password" id="password" name="password"></td>
+                <!-- <tr>
+                    <td class="trai">Confirm Password</td>
+                    <td><input type="password" id="password2" name="password2"></td>
+                </tr> -->
+                <tr>
+                    <td><input type="submit" name="submit" value="submit"></td>
+                </tr>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
